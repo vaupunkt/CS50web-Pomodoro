@@ -3,37 +3,46 @@
 {% block body %}
   <div id="timerForm">
     <form>
-      <div id="timerParagraph">
-        <p id="timerText">Work for</p>
-        <input name="duration" type="number" value="{{ work_duration }}" />
-        <p id="timerText">minutes, then take a</p>
-        <input name="break" type="number" value="{{ break_duration }}" />
-        <p id="timerText">minute break.</p>
+      <div id="timerParagraph" dir="ltr">
+        <div class="scrollWindow">
+          <p id="timerText">Work for</p>
+          <input id="timerInput" name="duration" type="number" value="{{ work_duration }}" />
+          <p id="timerText">minutes,</p>
+        </div>
+        <div class="scrollWindow">
+          <p id="timerText">then take a</p>
+          <input id="timerInput" name="break" type="number" value="{{ break_duration }}" />
+          <p id="timerText">minute break.</p>
+        </div>
+        <div class="scrollWindow">
+          <p id="timerText">Repeat</p>
+          <input id="timerInput" name="intervals" type="number" value="{{ intervals }}" />
+          <p id="timerText">times.</p>
+        </div>
+        <div class="scrollWindow">
+          <input id="startButton" type="submit" value="⏲️ Start" />
+        </div>
       </div>
-      <div id="timerParagraph">
-        <p id="timerText">Repeat</p>
-        <input name="intervals" type="number" value="{{ intervals }}" />
-        <p id="timerText">times.</p>
-      </div>
-      <input id="startButton" type="submit" value="Start" />
     </form>
   </div>
   <div id="timerRunning" style="display: none">
-    <div id="timerStatus">
-      <p id="currentDuration"></p>
-      <p id="currentInterval"></p>
-      <p id="currentPhase"></p>
+    <div id="timer">
+      <div id="timerStatus">
+        <p id="currentDuration"></p>
+        <p id="currentInterval"></p>
+        <p id="currentPhase"></p>
+      </div>
+      <div id="buttons">
+        <button id="start_pause">Pause</button>
+        <button id="skip">Skip</button>
+        <button id="reset">Reset</button>
+        <button id="muteAudio">Mute</button>
+      </div>
+      <div id="overallIntervalsDone">
+        <p>
+          Overall intervals done: <span id="overallIntervalsDoneCount">{{ overall_intervals_done }}</span>
+        </p>
+      </div>
     </div>
-    <div id="buttons">
-      <button id="start_pause">Pause</button>
-      <button id="skip">Skip</button>
-      <button id="reset">Reset</button>
-      <button id="muteAudio">Mute</button>
-    </div>
-  </div>
-  <div id="overallIntervalsDone">
-    <p>
-      Overall intervals done: <span id="overallIntervalsDoneCount">{{ overall_intervals_done }}</span>
-    </p>
   </div>
 {% endblock %}

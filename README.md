@@ -24,6 +24,12 @@ This project is distinctive and complex for several reasons:
 
 - `script.js`: Contains the JavaScript for the timer. It updates the timer display, handles the timer form submission, and makes AJAX requests to the `intervalComplete` view when an interval is completed.
 
+- `styles.css`: This is the stylesheet for the Pomodoro Timer application. It contains CSS rules that make the application visually appealing and user-friendly. The file includes styles for both light and dark modes, providing a comfortable viewing experience for users regardless of their lighting preferences. The styles are also responsive, ensuring that the application looks good and functions well on both mobile and desktop devices.
+
+- `timerSound.mp3`: This is a sound file used in the Pomodoro Timer application. The sound, provided by Alexander from OrangeFreeSounds, plays at the end of each interval to alert the user. The sound is a soothing Tibetan Singing Bowl sound, which is pleasant and not jarring to the user. This sound file is used under the CC BY-NC 4.0 license. More details can be found here.
+
+- `urls.py`: This file defines the URL patterns for the Pomodoro Timer application. It includes two paths: the root path ("") and the "intervalComplete" path. The root path is associated with the `index` view, which renders the timer form. The "intervalComplete" path is associated with the `intervalComplete` view, which is called when an interval is completed.
+
 ## Models
 
 The application has two models:

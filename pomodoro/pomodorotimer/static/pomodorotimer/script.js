@@ -54,8 +54,8 @@ window.onload = function () {
     }
     isWorkTime = !isWorkTime;
     document.querySelector("#currentPhase").innerHTML = isWorkTime
-      ? "Work"
-      : "Break";
+      ? "Work Time"
+      : "Break Time";
   });
 
   document.querySelector("#muteAudio").addEventListener("click", function () {
@@ -69,6 +69,7 @@ window.onload = function () {
     document.querySelector("#timerRunning").style.display = "none";
     isWorkTime = true;
     currentInterval = 1;
+    location.reload();
   });
 };
 
@@ -78,8 +79,8 @@ function startTimer(duration) {
   document.querySelector("#currentInterval").innerHTML =
     currentInterval + "/" + intervals;
   document.querySelector("#currentPhase").innerHTML = isWorkTime
-    ? "Work"
-    : "Break";
+    ? "Work Time"
+    : "Break Time";
   timeLeft = duration;
   timer = setInterval(function () {
     timeLeft--;
@@ -103,7 +104,7 @@ function startTimer(duration) {
           currentInterval++;
           startTimer(breakDuration);
         } else if (currentInterval == intervals) {
-          alert("Done!");
+          alert("Done! 🚀");
         }
       } else {
         startTimer(workDuration);
