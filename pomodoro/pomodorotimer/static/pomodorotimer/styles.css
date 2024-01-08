@@ -50,7 +50,7 @@ body {
   background-color: var(--main-bg-color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 10em;
+  font-size: 10vh;
   width: 100vw;
   color: var(--text-color);
 }
