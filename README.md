@@ -1,6 +1,6 @@
 # CS50web Capstone Project
 
-# Pomodoro Timer
+## Pomodoro Timer
 
 This is a simple Pomodoro Timer web application built with Django. It uses Python for the backend, HTML for the frontend, and JavaScript for interactivity.
 
@@ -117,7 +117,7 @@ The audio object is created with `new Audio("/static/assets/timerSound.mp3")`, a
 
 ### Functionality of the Backend
 
-#### Timer:
+#### Timer
 
 To ensure consistent and customizable timer settings, a Timer model was implemented in `models.py`:
 
@@ -130,7 +130,7 @@ class Timer(models.Model):
 
 The `index.html` template utilizes this model by passing the timer values to the front-end through Django's templating system.
 
-#### Overall Intervals:
+#### Overall Intervals
 
 To track the total number of completed intervals, a Intervals model was added in `models.py`:
 
