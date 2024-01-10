@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from django import forms
 from django.http import JsonResponse
-
-import json
 
 from .models import Timer, Intervals
 
@@ -21,6 +18,5 @@ def index(request):
         
 def intervalComplete(request):
     new_interval = Intervals.objects.create(timestamp=timezone.now())
-    print(new_interval.timestamp)
     intervalCount = Intervals.objects.count()
     return JsonResponse({"count": intervalCount})

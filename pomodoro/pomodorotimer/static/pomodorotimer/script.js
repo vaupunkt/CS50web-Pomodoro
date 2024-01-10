@@ -45,7 +45,7 @@ window.onload = function () {
           Math.floor(breakDuration / 60) + ":00";
         startTimer(breakDuration);
       } else if (currentInterval == intervals) {
-        alert("Done!");
+        alert("Done! 🚀");
       }
     } else {
       document.querySelector("#currentDuration").innerHTML =
