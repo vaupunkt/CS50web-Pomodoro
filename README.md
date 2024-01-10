@@ -4,6 +4,18 @@
 
 This is a simple Pomodoro Timer web application built with Django. It uses Python for the backend, HTML for the frontend, and JavaScript for interactivity.
 
+A Pomodoro Timer is a time management tool based on the Pomodoro Technique, which was developed by Francesco Cirillo. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks Each interval is known as a “pomodoro”, from the Italian word for ‘tomato’, after the tomato-shaped kitchen timer that Cirillo used as a university student.
+
+Here’s how to use the Pomodoro Timer:
+
+1.  Make a to-do list and get a timer.
+2.  Set the timer for 20 or 25 minutes and focus on one task until the alarm goes off.
+3.  Upon completion of the session, check off a pomodoro and record what you completed.
+4.  Take a 5-minute break to refresh your concentration.
+5.  After 4 pomodoros, take a long 15-minute break.
+
+The aim of this technique is to help you focus on any task you are working on, such as studying, writing, or coding. It’s a popular method used by many people to increase productivity and manage time effectively.
+
 ## Distinctiveness and Complexity
 
 This project is distinctive and complex for several reasons:
